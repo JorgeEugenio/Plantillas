@@ -1,0 +1,5 @@
+git add .
+git restore --staged
+git reset HEAD
+git commit -m "nombre descripcion"
+

@@ -1,0 +1,10 @@
+git config --global user.name JorgeEugenio
+git config --global user.email er.jorgeluis@gmail.com
+git config --global core.editor
+
+git config --list
+
+--------------------------------
+comandos para subir archivos a Git
+--------------------------------
+git clone "url de lo que se quiere clonar"
