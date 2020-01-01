@@ -5,5 +5,5 @@ git commit -m "nombre descripcion"
 git push//subir en la rama actual
 git push origin master//subir cambios en la rama master
 
-
+git pull origin master
 

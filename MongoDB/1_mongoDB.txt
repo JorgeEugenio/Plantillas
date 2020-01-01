@@ -1,0 +1,19 @@
+sist de bd no relacional de tipo clave valor
+nombre proveniente de Humogous
+se maneja en formato json
+comenzo en 2007
+escrito en C++
+los propios documentos se almacenan en BSON
+consoloa en js
+
+hay driver para:
+    C 
+    java
+    python
+    ruby
+    C++
+donde usar mongodb
+RDMBS
+framework
+
+

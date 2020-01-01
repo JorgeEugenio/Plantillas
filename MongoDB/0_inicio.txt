@@ -1,0 +1,46 @@
+Basado en nodeJS
+Es escalable
+
+tipos de bd no relacionales
+bd documental o bd orientado a documentos
+-------------
+administrado por un gestor de archivos
+ejm:
+{
+    names:'Julio Grados',
+    country:'Peru',
+    single:true
+}
+
+
+orientado clave/valor
+----------------------
+la clave es "user"
+user=>{
+    names:'Julio Grados',
+    country:'Peru',
+    single:true
+}
+orientado a Grafos
+------------------
+trata la informacion usando grafos y teoria de grafos
+cada nodo solo debe contener una sola columna
+por lo tanto se debe normalizar completamente
+las db y como la definicion de grafos indica
+las relaciones solo pueden ser binarias
+es decir un nodo solo puede solo usar una relacion 
+para entrar en contacto con otro nodo
+y no mas de uno, las ventajas de esta bd
+van enfocadas a la integridad de los datos
+cualquier cambio en un nodo o relacion solo
+afecta localmente
+
+porque usar NOSQL?
+---------------------
+es escalable
+
+
+
+
+
+
