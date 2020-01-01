@@ -1,0 +1,9 @@
+git checkout hash
+git checkout -b nombre_nuevo//creando un nuevo branch para guardar cambios
+git branch//para mostrar las ramas 
+git checkout master//para ir a la rama master
+git branch -d nombre.txt//borrar un branch
+git branch -D nombre.txt//borrar por completo una rama
+git checkout -b nuevo_titulo
+
+
