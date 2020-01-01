@@ -2,5 +2,6 @@ git add .
 git restore --staged .
 git restore --staged archivo.txt
 git commit -m "nombre descripcion"
+git push//subir en la rama actual
+git push origin master//subir en la rama main
 
-git otros
