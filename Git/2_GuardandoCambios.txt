@@ -1,5 +1,6 @@
 git add .
-git restore --staged
-git reset HEAD
+git restore --staged .
+git restore --staged archivo.txt
 git commit -m "nombre descripcion"
 
+git otros
