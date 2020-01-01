@@ -1,0 +1,4 @@
+git checkout -- archivo.txt//no esten en staged
+git reset HEAD archivo.txt//ya esta en staged
+
+git checkout archivo.txt//par solucionar el borrado por error
