@@ -1,0 +1,15 @@
+Alineamiento
+--------------
+-reconocimiento fisico del link
+-enderezamiento del soporte con nivel de precision
+-alineamiento azimutal
+
+-alineamiento vertical
+
+herramientas
+--------------
+-1 nivel de precision o inclinometro
+-abrazadera fija para reposar el link
+-1 AP ubiquiti de 2.4 Ghz
+-apk cambium para escanear equipos
+-soporte para brujula
