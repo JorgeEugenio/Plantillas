@@ -1,0 +1,11 @@
+{
+    "_id" : ObjectId("53186faflaaf16d5c056af82"),
+    "idEstudiante" : 1,
+    "puntuaciones" : {
+            "preguntas" : 45.42153421,
+            "ejercicios" : 35.12735,
+            "tareas" : 81.3213412,
+            "examen" : 68.32677
+    }
+    
+}
