@@ -40,7 +40,12 @@ porque usar NOSQL?
 es escalable
 
 
-
-
+NOSQL
+------
+Clave valor: Riak, Redis, Dynamo, Voldemort.
+Orientadas a documentos: MongoDB, CouchDB.
+Basadas en columnas: Cassandra, HyperTable, HBase, SimpleDB.
+Grafos: Neo4J, Infinite Graph.
+GRAFQL:viene con api para implementar las consultas
 
 
