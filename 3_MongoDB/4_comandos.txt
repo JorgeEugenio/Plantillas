@@ -1,0 +1,41 @@
+Una Coleccion <> Tabla
+Un  Documento <> Fila
+
+Coleccion es un conjunto de documentos
+nombres de Colecciones no validos
+  //un valor null
+nom bre//con un espacio null
+system_nombre//no se puede usar la palabra reservada system
+$_nombre//no se debe usar $ en el nombres
+
+MongoDB puede tener muchas BBDD
+una BBDD contiene Colecciones
+Una Coleccion contiene documentos
+Para nombrar un BBDD no usar /\."*<> null
+------------------------------------------------------------------
+los nombres son sensitivos a may y min
+Se recomienda escribir nombres en solo minuscula y limitados
+//como max puede tener 64 bytes
+//admin: se usa para variables de administracion
+//local:para pruebas y hacer temporales 
+//configura:todo lo relacionado a configuracion 
+---------------------------------------------------------------------
+mongod//es para levantar el servicio
+mongo//es para levantar la shell
+db//para ver en que db nos encontramos
+show dbs//para mostrar las BBDD
+
+use prueba//crea una bd de nombre prueba
+post = {"titulo" : "Mi primer post",
+        "contenido" : "Contenido de mi primer post",
+        "fecha" : new Date()}
+use prueba
+db.blog.insert(post)
+---------------------
+db.blog.find()//se usa para ver los datos del documento
+para conseguir ayuda
+-------------------
+help//ayuda en general
+db.help//ayuda del comando db
+
+
