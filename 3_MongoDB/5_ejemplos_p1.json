@@ -1,11 +1,33 @@
-{
-    "_id" : ObjectId("53186faflaaf16d5c056af82"),
-    "idEstudiante" : 1,
-    "puntuaciones" : {
-            "preguntas" : 45.42153421,
-            "ejercicios" : 35.12735,
-            "tareas" : 81.3213412,
-            "examen" : 68.32677
+show dbs
+use prueba
+post1 = {"titulo" : "Mi primer post",
+    "contenido" : "Contenido de mi tercer post",
+    "fecha" : new Date()
     }
-    
+post2 = {"titulo" : "Mi segundo post",
+        "contenido" : "Contenido de mi segundo post",
+        "fecha" : new Date()
+        }
+
+db.blog.insert(post1);//inserta un documento en una coleccion
+db.blog.insert(post2);//inserta un documento en una coleccion
+
+post1 = db.blog.findOne({"titulo":"Mi tercer post"});
+post1.comentarios =[]//concatena o adiciona un campo clave a la variable post1
+db.blog.update({"titulo":"Mi tercer post"},post1)//coincidencia , valor a actualizar
+db.blog.findOne("titulo":"Mi tercer post")
+function factorial(n){
+    if(n<=1) return 1;
+    return n*factorial(n-1);
 }
+db.help//para conseguir ayuda del comando db
+cd ..
+C:\>mongo --nodb
+conn = new Mongo("localhost");
+db =conn.getDB("prueba")
+db
+--------------------------------------------
+mongod --dbpath C:\data\mongodb4\db//para inicializar el servicio de mongo con la siguiente ruta
+mongod --config mongod.cfg//comando para inicializar personalizadamente
+
+
