@@ -8,6 +8,7 @@ db.personas.remove({})//elimina todos los registros de una coleccion
 db.prueba.drop()//para eliminar una coleccion
 modificadores
 -----------------
+db.blog.insertOne({"URL":"www.udemi.com","visitas":33})//inserta un documento
 db.blog.update({"URL":"www.udemi.com"},{"$inc": {"visitas":1}})//para incrementar o decrementar
 
 db.getCollection('blog').find({})//para mostrar los documentos de una coleccion
