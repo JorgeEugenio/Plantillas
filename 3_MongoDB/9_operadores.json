@@ -1,0 +1,41 @@
+$lt:<
+$lte:<=
+$gt:>
+$gte>=
+$ne: !=
+----------------
+$not
+$and
+$or
+----------------
+db.personas.find({"nombre":{"$not":{"$ne":"Juan"}}})
+db.personas.find({"$and":[{"nombre":/^J/},{"edad":34}]})
+db.personas.find({"$or":[{"nombre":/^J/},{"edad":34}]})
+Expresiones regulares
+MongoDB usa la libreria:
+Perl compatible Regular Expression(PCRE)
+db.personas.find({"nombre":/ua/i})//coincidencia de ua incluyendo las mayusculas y minusculas
+db.personas.find({"nombre":/ua?/i})//coincidencia de ua incluyendo las mayusculas y minusculas y ademas u y a por separado
+
+---------------------
+db.comida.insert({"frutas":["manzana","platano","melocoton"]})
+db.comida.find({"frutas":"platano"})
+
+db.comida.insert({"frutas":["pera","coco","platano"]})
+
+
+db.comida.insert({"manzana":1,"platano":4,"melocoton":3})
+db.comida.insert({"manzana":3,"platano":4,"melon":4})
+
+db.comida.find({"$where":
+    function(){
+        for(var a in this){
+            for(var b in this){
+                if(a != b && this[a] == this[b]){
+                    return true;
+                    }
+                }
+            }
+            return false;
+        }
+    });

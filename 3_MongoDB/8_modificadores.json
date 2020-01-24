@@ -1,0 +1,40 @@
+db.peliculas.insert({"genero":"accion"})
+db.peliculas.update({"genero":"accion"},{"$push":{"top10":{"nombre":"avatar"}}})
+db.peliculas.update({"genero":"accion"},{"$push":{"top10":{"$each":[{"nombre":"avatar"},{"nombre":"XXX"},{"nombre":"Jurasic park"}]}}})
+db.peliculas.update({"genero":"accion"},{"$push":{"top10":{"$each":[{"nombre":"avatar"},{"nombre":"XXX"},{"nombre":"Jurasic park"}],{"$slice":-2}}}})//para insertar los 2 ultimos, en 5 es los 5 primeros
+db.peliculas.update({"genero":"accion"},{"$push":{"top10":{"$each":[{"nombre":"avatar","valoracion":1},{"nombre":"XXX","valoracion":3},{"nombre":"Jurasic park","valoracion":5}],"$slice":-2,{"$sort":{"valoracion":-1}}}}}) //para ordenar desc
+
+    $push,$each//inserta documentos al final dentro de un arreglo
+    $slice,$sort
+    -------------------------------------------
+    db.peliculas.insertOne({"genero":"accion"})
+    db.peliculas.update(
+        {"genero":"accion"},
+        {"$push":
+            {"top10":
+                {"$each":[
+                         {"nombre":"avatar","valoracion":1},
+                         {"nombre":"XXX","valoracion":3},
+                         {"nombre":"Jurasic park","valoracion":5}
+                         ],"$slice":-3,"$sort":{"valoracion":-1}
+                 }
+             }
+         })
+
+         db.peliculas.update({"genero":"comedia"},{"$inc":{"visitas":1}},true)
+
+         
+-----------------------------------------------------------------------------------------------------------------------------------------
+db.peliculas.update({"genero":"accion"},
+{"$push":
+    {"top10":
+        {"$each":[
+            {"nombre":"avatar","valoracion":1},
+            {"nombre":"XXX","valoracion":3},
+            {"nombre":"Jurasic park","valoracion":3}
+                ],"$slice":3,"$sort":{"valoracion":-1}
+        }
+    }
+})//para ordenar desc
+
+

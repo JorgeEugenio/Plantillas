@@ -1,6 +1,7 @@
 use prueba
 db.personas.insertMany([{"nombre":"Pedro","edad":18,"direccion":"calle 123"},{"nombre":"Oscar","edad":25,"telefono":123123123},{"nombre":"Luis","edad":35,"direccion":"calle 456","telefono":234523451}]);
 db.personas.find();
+db.getCollection('personas').find({})
 db.personas.find().pretty();
 db.personas.remove({"_id":ObjectId("5e2382d3692a8074c946f96a")});
 db.personas.remove({})//elimina todos los registros de una coleccion
@@ -12,5 +13,8 @@ db.blog.update({"URL":"www.udemi.com"},{"$inc": {"visitas":1}})//para incrementa
 db.getCollection('blog').find({})//para mostrar los documentos de una coleccion
 
 db.blog.udpate({"_id":ObjectId("5e2382d3692a8074c946f96c")},{"$set":{"librofavorito":"La guerra y la paz"}});
+
+db.blog.update({"_id":ObjectId("5e2394db981aa1c44728db3e")},{"$set":{"librofavorito":["Harry potter","La guerra y la paz"]}});
+
 
 
