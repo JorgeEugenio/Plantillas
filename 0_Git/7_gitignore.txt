@@ -1,0 +1,13 @@
+//ignora todo el contenido de esta carpeta
+bower_components/
+
+//Estaremos evitando que el sistema de control de versiones procese todos los archivos acabados de .DS_Store
+*.DS_Store
+
+//en caso de haber subido archivos antes de usar .gitignore, usar
+git rm -r --cached node_modules
+
+git rm --cached "file" to unstage
+
+//para generar tu propio gitignore segun lo usado
+https://www.gitignore.io/

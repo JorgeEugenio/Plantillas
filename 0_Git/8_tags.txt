@@ -1,0 +1,5 @@
+//-a: para una anotacion
+//-m: para un mensaje
+git tag -a v0.0.1 -m "Alpha-inicio de proyecto"
+git tag
+git push --tag
