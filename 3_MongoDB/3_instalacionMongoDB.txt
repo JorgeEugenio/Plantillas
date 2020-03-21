@@ -1,2 +1,8 @@
 C:\Program Files\MongoDB\Server\4.2\data\//
 C:\Program Files\MongoDB\Server\4.2\log\//
+
+para cambiar la carpeta donde se instalara las colecciones es necesario hacer:
+ejecutar mongod --dbpath ruta
+
+para mas ayuda mongod --help//se ve toda la ayuda del asistente de mongod
+
