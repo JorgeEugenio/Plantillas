@@ -10,6 +10,7 @@ $or
 ----------------
 db.personas.find({"nombre":{"$not":{"$ne":"Juan"}}})
 db.personas.find({"$and":[{"nombre":/^J/},{"edad":34}]})
+db.personas.find({"$and":[{"nombre":/^J/},{"edad":{"$gte":18, "$lte":30}}]})
 db.personas.find({"$or":[{"nombre":/^J/},{"edad":34}]})
 Expresiones regulares
 MongoDB usa la libreria:
