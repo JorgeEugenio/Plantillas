@@ -10,7 +10,6 @@ $or
 ----------------
 db.personas.find({"nombre":{"$not":{"$ne":"Juan"}}})
 db.personas.find({"$and":[{"nombre":/^J/},{"edad":34}]})
-db.personas.find({"$and":[{"nombre":/^J/},{"edad":{"$gte":18, "$lte":30}}]})
 db.personas.find({"$or":[{"nombre":/^J/},{"edad":34}]})
 Expresiones regulares
 MongoDB usa la libreria:
@@ -40,3 +39,43 @@ db.comida.find({"$where":
             return false;
         }
     });
+
+    db.colección.find().limit(3)//limita la busqueda a 3 elementos
+    db.colección.find().skip(3) //se salta los 3 primeros resultados
+
+ejemplo de tuberias
+-------------------------
+    db.ordenes.aggregate([
+    {$match : {"estado":"A"}},
+    {$group : {"_id":"$cliente_id",total :{$sum: "$cantidad"}}}
+])
+
+
+ejemplo de proposito unico
+-------------------------------
+db.ventas.count({"item":"abc"})//cuenta los valores con la coincidencia
+db.ventas.distinct("item")//devuelve un arreglo de elementos distintos
+db.ventas.distinct("item":{"precio":10})//devuelve un arreglo de elementos distintos, con la coincidencia de precio 10
+
+
+db.ventas.aggregate(
+[
+    {$group:{
+            "_id" : {
+                mes : {$month: "$fecha"},
+                dia : {$dayOfMonth:"$fecha"},
+                año : {$year:"$fecha"}
+                },
+             precio_total: {$sum:{$multiply:["$precio","$cantidad"]}},
+             cantidadMedia :{$avg:"$cantidad"},
+             cantidad : {$sum: 1}
+        }}
+]
+)
+--------------------------------
+creacion de indices
+------------------------------------
+db.posts.createIndex({"autor.email":1})
+db.posts.find({"etiquetas":{
+   "$all": ["java"]     
+}})
